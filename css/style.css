@@ -1,23 +1,91 @@
+:root {
+    --background-color: #FAF0E4;
+    --button-color: #FF8551;
+    --button-hover-color: #EB4600;
+    --seperator-color: #FFDEDE;
+    --text-color: #A78295;
+    --head-color: #3F2E3E;
+
+    --radius: 10px;
+
+    --animation-duration: 0.5s;
+}
+
+html {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 body {
     text-align: center;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: var(--background-color);
 }
 
 h1 {
     font-size: 5rem;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: var(--head-color);
 }
 
 p {
     font-size: 2.1875rem;
+    color: var(--text-color);
 }
 
 button {
+    cursor: pointer;
+    font-size: 1.25rem;
     width: 250px;
     height: 80px;
-    background-color: blue;
+    background-color: var(--button-color);
     color: white;
+    border: none;
+    border-radius: var(--radius);
+    -webkit-border-radius: var(--radius);
+    -moz-border-radius: var(--radius);
+    -ms-border-radius: var(--radius);
+    -o-border-radius: var(--radius);
+    transition: var(--animation-duration) background-color;
+    -webkit-transition: var(--animation-duration) background-color;
+    -moz-transition: var(--animation-duration) background-color;
+    -ms-transition: var(--animation-duration) background-color;
+    -o-transition: var(--animation-duration) background-color;
 }
 
 button:hover {
-    background-color: green;
+    background-color: var(--button-hover-color);
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.left-part {
+    width: 50%;
+    padding: 1.5rem;
+}
+
+.right-part {
+    width: 50%;
+    padding: 1.5rem;
+    text-align: left;
+}
+
+.right-part p {
+    color: var(--button-color);
+}
+
+.seperator {
+    height: 90vh;
+    width: 10px;
+    background-color: var(--seperator-color);
+    border-radius: var(--radius);
+    -webkit-border-radius: var(--radius);
+    -moz-border-radius: var(--radius);
+    -ms-border-radius: var(--radius);
+    -o-border-radius: var(--radius);
 }
